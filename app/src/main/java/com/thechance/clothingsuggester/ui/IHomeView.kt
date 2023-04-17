@@ -8,6 +8,6 @@ interface IHomeView {
 
     fun displayWeatherDetails(weather: BaseResponse)
 
-    fun onGetDataFailure(error: String)
+    fun showFailureGetData(error: String)
 
 }

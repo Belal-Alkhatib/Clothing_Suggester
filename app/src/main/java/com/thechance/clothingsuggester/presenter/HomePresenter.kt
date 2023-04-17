@@ -18,6 +18,6 @@ class HomePresenter(private val view: IHomeView) {
         view.hideLoading()
     }
     private fun onFailure(message: String?) {
-        view.onGetDataFailure(message.toString())
+        view.showFailureGetData(message.toString())
     }
 }
