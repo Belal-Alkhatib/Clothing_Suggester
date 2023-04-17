@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Clothing Suggester</string>
+
+    <string name="clouds">Clouds</string>
+    <string name="wind">Wind</string>
+    <string name="pressure">Pressure</string>
+    <string name="sunrise">Sunrise</string>
+    <string name="sunset">Sunset</string>
+    <string name="humidity">Humidity</string>
+
+    <string name="suggest_for_you">Suggest For You</string>
+    <string name="get_wear">Get Wear</string>
+    <string name="today_weather_details">Today\'s Weather Details</string>
 </resources>
