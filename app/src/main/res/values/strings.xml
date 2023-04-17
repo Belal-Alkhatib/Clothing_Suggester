@@ -11,4 +11,14 @@
     <string name="suggest_for_you">Suggest For You</string>
     <string name="get_wear">Get Wear</string>
     <string name="today_weather_details">Today\'s Weather Details</string>
+    <string name="feels_like">Feels Like</string>
+
+    <string name="air_quality">Air Quality</string>
+
+    <string name="degree">°</string>
+    <string name="test_number">21.8</string>
+    <string name="test_big_number">17825</string>
+    <string name="test_percent">80%</string>
+    <string name="test_time">5:15 AM</string>
+    <string name="test_date">Monday, 12 Feb</string>
 </resources>

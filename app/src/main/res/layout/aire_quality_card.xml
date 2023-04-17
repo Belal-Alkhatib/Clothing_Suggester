@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="@color/text_primary_white_color"
+    app:cardCornerRadius="@dimen/spacing_xlarge"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/spacing_medium">
+
+        <ImageView
+            android:id="@+id/imageViewCloudSun"
+            android:layout_width="@dimen/large_icon_size"
+            android:layout_height="@dimen/large_icon_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_cloud_sun" />
+
+        <TextView
+            android:id="@+id/textAirQuality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_small"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/air_quality"
+            android:textColor="@color/color_text_primary"
+            android:textSize="@dimen/font_size_title_large"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewCloudSun"
+            app:layout_constraintStart_toEndOf="@+id/imageViewCloudSun"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageViewCloud"
+            android:layout_width="@dimen/small_icon_size"
+            android:layout_height="@dimen/small_icon_size"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewClouds"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textCloud"
+            app:srcCompat="@drawable/ic_cloud" />
+
+        <TextView
+            android:id="@+id/textCloud"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_normal"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:text="@string/clouds"
+            android:textColor="@color/color_text_secondary"
+            android:textSize="@dimen/font_size_body"
+            app:layout_constraintStart_toEndOf="@+id/imageViewCloud"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewCloudSun" />
+
+        <TextView
+            android:id="@+id/textViewClouds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="@string/test_number"
+            android:textColor="@color/color_text_primary"
+            android:textSize="@dimen/font_size_body"
+            app:layout_constraintStart_toStartOf="@+id/textCloud"
+            app:layout_constraintTop_toBottomOf="@+id/textCloud" />
+
+
+        <TextView
+            android:id="@+id/textHumidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:text="@string/humidity"
+            android:textColor="@color/color_text_secondary"
+            android:textSize="@dimen/font_size_body"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewCloudSun" />
+
+        <TextView
+            android:id="@+id/textViewHumidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="@string/test_percent"
+            android:textColor="@color/color_text_primary"
+            android:textSize="@dimen/font_size_body"
+            app:layout_constraintStart_toStartOf="@+id/textHumidity"
+            app:layout_constraintTop_toBottomOf="@+id/textHumidity" />
+
+        <ImageView
+            android:id="@+id/imageViewHumidity"
+            android:layout_width="@dimen/small_icon_size"
+            android:layout_height="@dimen/small_icon_size"
+            android:layout_marginEnd="@dimen/spacing_normal"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewHumidity"
+            app:layout_constraintEnd_toStartOf="@+id/textViewHumidity"
+            app:layout_constraintTop_toTopOf="@+id/textHumidity"
+            app:srcCompat="@drawable/ic_humidity" />
+
+
+        <TextView
+            android:id="@+id/textWind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_small"
+            android:text="@string/wind"
+            android:textColor="@color/color_text_secondary"
+            android:textSize="@dimen/font_size_body"
+            app:layout_constraintStart_toStartOf="@+id/centerGuideline"
+            app:layout_constraintTop_toTopOf="@+id/textHumidity" />
+
+        <TextView
+            android:id="@+id/textViewWind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="@string/test_percent"
+            android:textColor="@color/color_text_primary"
+            android:textSize="@dimen/font_size_body"
+            app:layout_constraintStart_toStartOf="@+id/textWind"
+            app:layout_constraintTop_toBottomOf="@+id/textWind" />
+
+        <ImageView
+            android:id="@+id/imageViewWind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_small"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewWind"
+            app:layout_constraintEnd_toStartOf="@+id/centerGuideline"
+            app:layout_constraintTop_toTopOf="@+id/textWind"
+            app:srcCompat="@drawable/ic_wind" />
+
+
+        <!-- ********************** Second Row ***********************-->
+
+        <ImageView
+            android:id="@+id/imageViewSunrise"
+            android:layout_width="@dimen/small_icon_size"
+            android:layout_height="@dimen/small_icon_size"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewSunrise"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textSunrise"
+            app:srcCompat="@drawable/ic_sunrise" />
+
+        <TextView
+            android:id="@+id/textSunrise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:text="@string/sunrise"
+            android:textColor="@color/color_text_secondary"
+            android:textSize="@dimen/font_size_body"
+            app:layout_constraintStart_toStartOf="@+id/textViewClouds"
+            app:layout_constraintTop_toBottomOf="@+id/textViewClouds" />
+
+        <TextView
+            android:id="@+id/textViewSunrise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="@string/test_time"
+            android:textColor="@color/color_text_primary"
+            android:textSize="@dimen/font_size_body"
+            app:layout_constraintStart_toStartOf="@+id/textSunrise"
+            app:layout_constraintTop_toBottomOf="@+id/textSunrise" />
+
+
+        <TextView
+            android:id="@+id/textSunset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:layout_marginStart="@dimen/spacing_small"
+            android:text="@string/wind"
+            android:textColor="@color/color_text_secondary"
+            android:textSize="@dimen/font_size_body"
+            app:layout_constraintStart_toStartOf="@+id/centerGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/textViewWind" />
+
+        <TextView
+            android:id="@+id/textViewSunset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="@string/test_time"
+            android:textColor="@color/color_text_primary"
+            android:textSize="@dimen/font_size_body"
+            app:layout_constraintStart_toStartOf="@+id/textSunset"
+            app:layout_constraintTop_toBottomOf="@+id/textSunset" />
+
+        <ImageView
+            android:id="@+id/imageViewSunset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_small"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewSunset"
+            app:layout_constraintEnd_toStartOf="@+id/centerGuideline"
+            app:layout_constraintTop_toTopOf="@+id/textSunset"
+            app:srcCompat="@drawable/ic_sunset" />
+
+
+
+        <TextView
+            android:id="@+id/textPressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:text="@string/pressure"
+            android:textColor="@color/color_text_secondary"
+            android:textSize="@dimen/font_size_body"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewHumidity" />
+
+        <TextView
+            android:id="@+id/textViewPressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="@string/test_big_number"
+            android:textColor="@color/color_text_primary"
+            android:textSize="@dimen/font_size_body"
+            app:layout_constraintStart_toStartOf="@+id/textPressure"
+            app:layout_constraintTop_toBottomOf="@+id/textPressure" />
+
+        <ImageView
+            android:id="@+id/imageViewPressure"
+            android:layout_width="@dimen/small_icon_size"
+            android:layout_height="@dimen/small_icon_size"
+            android:layout_marginEnd="@dimen/spacing_normal"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewPressure"
+            app:layout_constraintEnd_toStartOf="@+id/textViewPressure"
+            app:layout_constraintTop_toTopOf="@+id/textPressure"
+            app:srcCompat="@drawable/ic_pressure" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/centerGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

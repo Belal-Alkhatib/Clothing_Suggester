@@ -15,12 +15,16 @@
     <dimen name="font_size_title_medium">20sp</dimen>
     <dimen name="font_size_title_large">22sp</dimen>
     <dimen name="font_size_title_x_large">24sp</dimen>
+    <dimen name="font_size_title_xx_large">50sp</dimen>
 
     <dimen name="radius_normal">8dp</dimen>
     <dimen name="radius_medium">16dp</dimen>
 
-    <dimen name="small_icon_size">16dp</dimen>
+    <dimen name="small_icon_size">24dp</dimen>
+    <dimen name="large_icon_size">40dp</dimen>
     <dimen name="default_icon_size">24dp</dimen>
+    <dimen name="spacing_xSmall">2dp</dimen>
+    <dimen name="avatar_image_size">56dp</dimen>
 
 </resources>
 
