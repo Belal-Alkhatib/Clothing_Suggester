@@ -20,5 +20,5 @@
 
     <color name="icon_color">#6D69EF</color>
     <color name="stroke_color">#F4A8FB</color>
-    <color name="icon_placeholder_color">#958AE9</color>
+    <color name="icon_placeholder_color">#CC958AE9</color>
 </resources>
