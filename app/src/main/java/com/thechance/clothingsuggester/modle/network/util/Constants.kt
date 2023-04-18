@@ -1,4 +1,4 @@
-package com.thechance.clothingsuggester.modle
+package com.thechance.clothingsuggester.modle.network.util
 
 import com.thechance.clothingsuggester.BuildConfig
 
