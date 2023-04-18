@@ -7,7 +7,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import com.thechance.clothingsuggester.R
-import com.thechance.clothingsuggester.databinding.ActivityTestBinding
+import com.thechance.clothingsuggester.databinding.ActivityHomeBinding
 import com.thechance.clothingsuggester.modle.network.response.*
 import com.thechance.clothingsuggester.presenter.HomePresenter
 import com.thechance.clothingsuggester.ui.util.Constants
@@ -19,10 +19,10 @@ class HomeActivity : AppCompatActivity(), IHomeView {
     private lateinit var progressDialog:ProgressDialog
 
     lateinit var sharedPref: SharedPreferences
-    lateinit var binding:ActivityTestBinding
+    lateinit var binding:ActivityHomeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityTestBinding.inflate(layoutInflater)
+        binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         presenter.getWeather()

@@ -25,6 +25,7 @@
     <dimen name="default_icon_size">24dp</dimen>
     <dimen name="spacing_xSmall">2dp</dimen>
     <dimen name="avatar_image_size">56dp</dimen>
+    <dimen name="image_view_Weather_size_large">150dp</dimen>
 
 </resources>
 
