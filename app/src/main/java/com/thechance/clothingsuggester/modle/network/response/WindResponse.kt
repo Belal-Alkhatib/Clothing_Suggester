@@ -3,10 +3,10 @@ package com.thechance.clothingsuggester.modle.network.response
 import com.google.gson.annotations.SerializedName
 
 data class WindResponse(
-    @SerializedName("")
+    @SerializedName("deg")
     val windDirection: Int,
-    @SerializedName("")
+    @SerializedName("gust")
     val windGust: Double,
-    @SerializedName("")
+    @SerializedName("speed")
     val windSpeed: Double
 )

@@ -2,6 +2,7 @@ package com.thechance.clothingsuggester.modle
 
 
 import com.thechance.clothingsuggester.BuildConfig
+import com.thechance.clothingsuggester.modle.network.util.Constants
 import com.thechance.clothingsuggester.modle.network.util.MethodRequest
 import okhttp3.*
 

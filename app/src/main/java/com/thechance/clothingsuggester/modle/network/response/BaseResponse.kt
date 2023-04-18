@@ -12,7 +12,7 @@ data class BaseResponse(
     @SerializedName("coord")
     val coordinate: CoordinateResponse,
     @SerializedName("dt")
-    val dateTime: Int,
+    val dateTime: Long,
     @SerializedName("id")
     val cityId: Int,
     @SerializedName("main")
@@ -26,7 +26,7 @@ data class BaseResponse(
     @SerializedName("visibility")
     val visibility: Int,
     @SerializedName("weather")
-    val weather: List<WeatherResponse>,
+    val weathers: List<WeatherResponse>,
     @SerializedName("wind")
     val wind: WindResponse
 )
