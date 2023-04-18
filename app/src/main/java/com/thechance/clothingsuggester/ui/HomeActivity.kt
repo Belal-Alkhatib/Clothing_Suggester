@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.bumptech.glide.Glide
 import com.thechance.clothingsuggester.R
 import com.thechance.clothingsuggester.databinding.ActivityMainBinding
 import com.thechance.clothingsuggester.modle.network.response.BaseResponse
@@ -20,7 +21,11 @@ class HomeActivity : AppCompatActivity() , IHomeView{
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_main)
 
-        Thread.sleep(3000)
+        Glide
+            .with(this)
+            .load("https://github.com/Belal-Alkhatib/TheChance_Docs/blob/main/weather_icon/10d.png?raw=true")
+            .centerCrop()
+            .into(binding.imageViewWeather);
         presenter.getWeather()
 
     }

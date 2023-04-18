@@ -1,8 +1,14 @@
 package com.thechance.clothingsuggester.modle.network.response
 
+import com.google.gson.annotations.SerializedName
+
 data class WeatherResponse(
-    val description: String,
-    val icon: String,
-    val id: Int,
-    val main: String
+    @SerializedName("description")
+    val weatherDescription: String,
+    @SerializedName("icon")
+    val weatherIcon: String,
+    @SerializedName("id")
+    val weatherId: Int,
+    @SerializedName("main")
+    val weatherMain: String
 )

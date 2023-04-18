@@ -1,6 +1,6 @@
 package com.thechance.clothingsuggester.modle.network.response
 
-data class SysResponse(
+data class LocationInfoResponse(
     val country: String,
     val id: Int,
     val sunrise: Int,
