@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="urn:oasis:names:tc:xliff:document:1.2"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:loop="true"
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="2400"
+        motion:motionInterpolator="cubic(0.2,0.2,0.55,0.57)">
+
+        <KeyFrameSet>
+            <KeyAttribute
+                android:translationX="0dp"
+                android:translationY="0dp"
+                motion:framePosition="0"
+                motion:motionTarget="@id/imageViewWeather" />
+
+            <KeyAttribute
+                android:translationX="-16dp"
+                android:translationY="16dp"
+                motion:framePosition="50"
+                motion:motionTarget="@id/imageViewWeather" />
+
+            <KeyAttribute
+                android:translationX="0dp"
+                android:translationY="0dp"
+                motion:framePosition="100"
+                motion:motionTarget="@id/imageViewWeather" />
+
+        </KeyFrameSet>
+        <OnClick
+            motion:clickAction="toggle"
+            motion:targetId="@+id/textViewWeatherDegree" />
+
+        <!--        <OnSwipe motion:maxAcceleration="10.46"-->
+        <!--            motion:maxVelocity="0.1" />-->
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start"></ConstraintSet>
+    <ConstraintSet android:id="@+id/end"></ConstraintSet>
+
+
+</MotionScene>
