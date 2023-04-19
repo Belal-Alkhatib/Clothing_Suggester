@@ -62,7 +62,7 @@
             android:fontFamily="@font/montserrat_semibold"
             android:text="@string/feels_like"
             android:textColor="@color/color_text_primary"
-            android:textSize="@dimen/font_size_body"
+            android:textSize="@dimen/font_size_caption"
             app:layout_constraintStart_toStartOf="@+id/textCloud"
             app:layout_constraintTop_toBottomOf="@+id/textCloud" />
 
@@ -85,7 +85,7 @@
             android:fontFamily="@font/montserrat_semibold"
             android:text="@string/test_percent"
             android:textColor="@color/color_text_primary"
-            android:textSize="@dimen/font_size_body"
+            android:textSize="@dimen/font_size_caption"
             app:layout_constraintStart_toStartOf="@+id/textHumidity"
             app:layout_constraintTop_toBottomOf="@+id/textHumidity" />
 
@@ -162,7 +162,7 @@
             android:fontFamily="@font/montserrat_semibold"
             android:text="@string/test_time"
             android:textColor="@color/color_text_primary"
-            android:textSize="@dimen/font_size_body"
+            android:textSize="@dimen/font_size_caption"
             app:layout_constraintStart_toStartOf="@+id/textSunrise"
             app:layout_constraintTop_toBottomOf="@+id/textSunrise" />
 
@@ -186,7 +186,7 @@
             android:fontFamily="@font/montserrat_semibold"
             android:text="@string/test_time"
             android:textColor="@color/color_text_primary"
-            android:textSize="@dimen/font_size_body"
+            android:textSize="@dimen/font_size_caption"
             app:layout_constraintStart_toStartOf="@+id/textSunset"
             app:layout_constraintTop_toBottomOf="@+id/textSunset" />
 
@@ -220,7 +220,7 @@
             android:fontFamily="@font/montserrat_semibold"
             android:text="@string/test_big_number"
             android:textColor="@color/color_text_primary"
-            android:textSize="@dimen/font_size_body"
+            android:textSize="@dimen/font_size_caption"
             app:layout_constraintStart_toStartOf="@+id/textPressure"
             app:layout_constraintTop_toBottomOf="@+id/textPressure" />
 

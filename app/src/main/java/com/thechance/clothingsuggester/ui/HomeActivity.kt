@@ -5,7 +5,6 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
 import com.thechance.clothingsuggester.R
 import com.thechance.clothingsuggester.databinding.ActivityHomeBinding
 import com.thechance.clothingsuggester.modle.network.response.*
@@ -32,8 +31,6 @@ class HomeActivity : AppCompatActivity(), IHomeView {
 
 
     private fun updateWeatherView(weather: BaseResponse){
-        Log.e(TAG, " ****************** updateWeatherView ${weather.dateTime.formatDate()}")
-
 
         binding.apply {
             layoutWeatherInfo.textViewDate.text = weather.dateTime.formatDate()
@@ -52,7 +49,7 @@ class HomeActivity : AppCompatActivity(), IHomeView {
             layoutWeatherInfo.textViewWeatherDegree.text = main.temperature.toInt().toString().degreeFormat()
             layoutWeatherInfo.textViewFeelsLike.text = "Feels Like ${main.feelsLike}"
             include.textViewPressure.text = main.pressure.toString()
-            include.textViewHumidity.text = main.humidity.toString()
+            include.textViewHumidity.text = main.humidity.toString().percentFormat()
             buttonGetWear.setOnClickListener {
                 showAppropriateClothing(main.temperature)
             }
@@ -62,7 +59,6 @@ class HomeActivity : AppCompatActivity(), IHomeView {
 
 
     private fun updateLocationInfo(location: LocationInfoResponse){
-        Log.e(TAG, " ****************** updateLocationInfo ${location.sunrise.formatTime()}")
         binding.apply {
             layoutWeatherInfo.textViewCountryName.text = location.country
             include.textViewSunrise.text = location.sunrise.formatTime()
@@ -123,8 +119,6 @@ class HomeActivity : AppCompatActivity(), IHomeView {
     }
 
     private fun updateWindWeatherInfo(wind: WindResponse){
-        Log.e(TAG, " ****************** updateWindWeatherInfo ${wind.windSpeed.toString().speedFormat()}")
-
         binding.include.textViewWind.text = wind.windSpeed.toString().speedFormat()
     }
 
@@ -174,7 +168,6 @@ class HomeActivity : AppCompatActivity(), IHomeView {
         progressDialog.show()
     }
     override fun hideLoading() {
-        Log.e(HomeActivity.TAG, "hideLoading-------------")
         if (progressDialog.isShowing) {
             progressDialog.dismiss()
         }
@@ -189,8 +182,6 @@ class HomeActivity : AppCompatActivity(), IHomeView {
     override fun showFailureGetData(error: String) {
         Log.e(HomeActivity.TAG, "onGetDataFailure: $error")
     }
-
-
 
 
     companion object{
