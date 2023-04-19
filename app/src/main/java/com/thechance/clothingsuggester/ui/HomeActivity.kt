@@ -36,9 +36,9 @@ class HomeActivity : AppCompatActivity(), IHomeView {
 
 
         binding.apply {
-            textViewDate.text = weather.dateTime.formatDate()
+            layoutWeatherInfo.textViewDate.text = weather.dateTime.formatDate()
             textViewCityNameLocation.text = weather.cityName
-            textViewCountryName.text = weather.cityName
+            layoutWeatherInfo.textViewCountryName.text = weather.cityName
         }
         updateMainWeatherInfo(weather.mainTemperature)
         updateLocationInfo(weather.locationInfo)
@@ -49,8 +49,8 @@ class HomeActivity : AppCompatActivity(), IHomeView {
 
     private fun updateMainWeatherInfo(main: MainTemperatureResponse){
         binding.apply {
-            textViewWeatherDegree.text = main.temperature.toInt().toString().degreeFormat()
-            textViewFeelsLike.text = "Feels Like ${main.feelsLike}"
+            layoutWeatherInfo.textViewWeatherDegree.text = main.temperature.toInt().toString().degreeFormat()
+            layoutWeatherInfo.textViewFeelsLike.text = "Feels Like ${main.feelsLike}"
             include.textViewPressure.text = main.pressure.toString()
             include.textViewHumidity.text = main.humidity.toString()
             buttonGetWear.setOnClickListener {
@@ -64,7 +64,7 @@ class HomeActivity : AppCompatActivity(), IHomeView {
     private fun updateLocationInfo(location: LocationInfoResponse){
         Log.e(TAG, " ****************** updateLocationInfo ${location.sunrise.formatTime()}")
         binding.apply {
-            textViewCountryName.text = location.country
+            layoutWeatherInfo.textViewCountryName.text = location.country
             include.textViewSunrise.text = location.sunrise.formatTime()
             include.textViewSunset.text = location.sunset.formatTime()
         }
@@ -115,7 +115,7 @@ class HomeActivity : AppCompatActivity(), IHomeView {
         currentWeather.apply {
             binding.apply {
                 include.textViewClouds.text = weatherDescription
-                imageViewWeather.also {
+                layoutWeatherInfo.imageViewWeather.also {
                     it.loadImageFromNetwork(this@HomeActivity, weatherIconMap[weatherIcon], it)
                 }
             }

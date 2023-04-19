@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background_card"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:id="@+id/motionLayout"
+    app:layoutDescription="@xml/item_weather_temperature_scene">
+
+
+
+        <TextView
+            android:id="@+id/textViewWeatherDegree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:layout_marginEnd="@dimen/spacing_medium"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="21°"
+            android:textColor="@color/text_primary_white_color"
+            android:textSize="@dimen/font_size_title_xx_large"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageViewWeather"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginStart="@dimen/spacing_medium"
+            android:layout_marginTop="@dimen/spacing_normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/cloud_image" />
+
+        <TextView
+            android:id="@+id/textViewCityName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Gaza,"
+            android:textColor="@color/text_primary_white_color"
+            android:textSize="@dimen/font_size_title_x_large"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+        <TextView
+            android:id="@+id/textViewCountryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_small"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="PS"
+            android:textColor="@color/text_primary_white_color"
+            android:textSize="@dimen/font_size_title_x_large"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textViewCityName"
+            app:layout_constraintStart_toEndOf="@+id/textViewCityName" />
+
+        <TextView
+            android:id="@+id/textViewDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_medium"
+            android:text="@string/test_date"
+            android:textColor="@color/text_secondary_white_color"
+            android:textSize="@dimen/font_size_body"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textViewCountryName"
+            app:layout_constraintStart_toStartOf="@+id/textViewCityName"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCityName" />
+
+        <TextView
+            android:id="@+id/textViewFeelsLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/spacing_medium"
+            android:text="26°"
+            android:textColor="@color/text_secondary_white_color"
+            android:textSize="@dimen/font_size_caption"
+            app:layout_constraintEnd_toEndOf="@+id/textViewWeatherDegree"
+            app:layout_constraintStart_toStartOf="@+id/textViewWeatherDegree"
+            app:layout_constraintTop_toBottomOf="@+id/textViewWeatherDegree" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="@dimen/avatar_image_size"
+            android:layout_height="@dimen/avatar_image_size"
+            android:layout_marginEnd="@dimen/spacing_small"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintEnd_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:srcCompat="@drawable/ic_nowflake" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="@dimen/avatar_image_size"
+            android:layout_height="@dimen/avatar_image_size"
+            android:layout_marginEnd="@dimen/spacing_large"
+            android:layout_marginBottom="@dimen/spacing_medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_placeholder_wind" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="156dp" />
+
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
