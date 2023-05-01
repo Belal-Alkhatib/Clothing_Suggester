@@ -31,10 +31,9 @@ class HomeActivity : AppCompatActivity(), IHomeView {
 
 
     private fun updateWeatherView(weather: BaseResponse){
-
         binding.apply {
             layoutWeatherInfo.textViewDate.text = weather.dateTime.formatDate()
-            textViewCityNameLocation.text = weather.cityName
+            layoutHeader.textViewCityNameLocation.text = weather.cityName
             layoutWeatherInfo.textViewCountryName.text = weather.cityName
         }
         updateMainWeatherInfo(weather.mainTemperature)
@@ -124,7 +123,7 @@ class HomeActivity : AppCompatActivity(), IHomeView {
 
 
     private val coldClothes = listOf(R.drawable.cold_coat1, R.drawable.cold_coat2, R.drawable.cold_coat3)
-    private val mildClothes = listOf(R.drawable.mild_tshirt1, R.drawable.mlid_tshirt2, R.drawable.mlid_tshirt3)
+    private val mildClothes = listOf(R.drawable.mild_tshirt1, R.drawable.mild_tshirt2, R.drawable.mild_tshirt3)
     private val warmClothes = listOf(R.drawable.warm_tshirt1, R.drawable.warm_tshirt2, R.drawable.warm_tshirt3)
     fun showAppropriateClothing(temperature: Double) {
         val clothes = getClothesForTemperature(temperature)
@@ -164,6 +163,7 @@ class HomeActivity : AppCompatActivity(), IHomeView {
     override fun showLoading() {
         progressDialog = ProgressDialog(this)
         progressDialog.setTitle("Uploading...")
+        progressDialog.setCancelable(false)
         progressDialog.setMessage("Please wait while the data is being uploaded")
         progressDialog.show()
     }
@@ -180,7 +180,7 @@ class HomeActivity : AppCompatActivity(), IHomeView {
     }
 
     override fun showFailureGetData(error: String) {
-        Log.e(HomeActivity.TAG, "onGetDataFailure: $error")
+        Log.e(TAG, "onGetDataFailure: $error")
     }
 
 

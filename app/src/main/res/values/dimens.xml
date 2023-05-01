@@ -26,6 +26,7 @@
     <dimen name="spacing_xSmall">2dp</dimen>
     <dimen name="avatar_image_size">56dp</dimen>
     <dimen name="image_view_Weather_size_large">150dp</dimen>
+    <dimen name="suggetion_image_sizw">400dp</dimen>
 
 </resources>
 

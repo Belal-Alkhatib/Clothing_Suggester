@@ -24,66 +24,21 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/image_avatar"
-                android:layout_width="@dimen/avatar_image_size"
-                android:layout_height="@dimen/avatar_image_size"
-                android:layout_marginTop="@dimen/spacing_medium"
-                android:layout_marginEnd="@dimen/spacing_medium"
-                android:elevation="@dimen/spacing_small"
-                android:padding="@dimen/spacing_xSmall"
-                android:src="@drawable/image_avatar"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:shapeAppearanceOverlay="@style/circleImageView"
-                app:strokeColor="@color/stroke_color"
-                app:strokeWidth="@dimen/spacing_xSmall" />
 
-            <TextView
-                android:id="@+id/textViewCityNameLocation"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/montserrat_medium"
-                android:text="Gaza"
-                android:textColor="@color/color_text_primary"
-                android:textSize="@dimen/font_size_title_medium"
-                app:layout_constraintBottom_toBottomOf="@+id/image_avatar"
-                app:layout_constraintStart_toStartOf="@+id/guidelineCenter"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="@+id/icon_more"
-                app:layout_constraintEnd_toStartOf="@+id/guidelineCenter"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_location" />
-
-            <ImageView
-                android:id="@+id/icon_more"
-                android:layout_width="@dimen/avatar_image_size"
-                android:layout_height="@dimen/avatar_image_size"
-                android:layout_marginStart="@dimen/spacing_medium"
-                android:layout_marginTop="@dimen/spacing_medium"
-                android:background="@drawable/bacground_circle"
-                android:elevation="@dimen/spacing_small"
-                android:padding="@dimen/spacing_xnormal"
-                android:src="@drawable/ic_more"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:shapeAppearanceOverlay="@style/circleImageView" />
+            <include
+                android:id="@+id/layoutHeader"
+                layout="@layout/item_header" />
 
             <include
                 android:id="@+id/layoutWeatherInfo"
                 layout="@layout/item_weather_temperature"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_large"
                 android:layout_marginHorizontal="@dimen/spacing_medium"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/image_avatar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                app:layout_constraintTop_toBottomOf="@+id/layoutHeader" />
 
             <TextView
                 android:id="@+id/textAirQuality"
@@ -101,13 +56,17 @@
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/imageViewClouth"
                 android:layout_width="match_parent"
-                android:layout_height="240dp"
+                android:layout_height="@dimen/suggetion_image_sizw"
                 android:layout_marginHorizontal="@dimen/spacing_medium"
                 android:layout_marginTop="@dimen/spacing_normal"
-                android:background="@drawable/background_dash_line"
-                app:layout_constraintTop_toBottomOf="@+id/textAirQuality">
+                android:background="@drawable/bacground_suggestion_image"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toBottomOf="@+id/textAirQuality"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Large"
+                tools:layout_editor_absoluteX="16dp">
 
             </com.google.android.material.imageview.ShapeableImageView>
+
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/buttonGetWear"
@@ -128,7 +87,6 @@
                 layout="@layout/item_aire_quality"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:layout_marginHorizontal="@dimen/spacing_medium"
                 android:layout_marginTop="@dimen/spacing_large"
                 android:layout_marginBottom="24dp"
@@ -136,12 +94,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/buttonGetWear"
                 tools:layout_editor_absoluteX="16dp" />
 
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guidelineCenter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_begin="184dp" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
