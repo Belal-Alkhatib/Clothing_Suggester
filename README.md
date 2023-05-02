@@ -10,3 +10,11 @@ To get a glimpse of how Clothing Suggester works, check out this snapshot video:
 
 [![Clothing Suggester Snapshot Video](https://img.youtube.com/vi/z5b83DTFCBc/0.jpg)](https://www.youtube.com/watch?v=z5b83DTFCBc)
 
+## Technologies Used
+
+- MVP (Model View Presenter)
+- OkHttp
+- OpenWeatherMap API
+- MotionLayout
+
+
